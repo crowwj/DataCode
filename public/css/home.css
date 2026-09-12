@@ -30,7 +30,8 @@ body {
     align-items: center;
     padding: 1.5rem 5%;
     width: 100%;
-    background-color: #ffffff;
+    background-color: #e9e7e3;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .barra-de-navegacin .div {
@@ -98,7 +99,7 @@ body {
 }
 
 /* ==========================================
-   CONTENIDO PRINCIPAL (HERO)
+   CONTENIDO PRINCIPAL 
    ========================================== */
 .contenido-principal {
     padding: 5rem 5% 4rem 5%;
@@ -223,7 +224,7 @@ body {
 }
 
 /* ==========================================
-   QUÉ ES UN HACKATÓN (SECCIÓN OSCURA)
+    HACKATÓN 
    ========================================== */
 .qu-es-un-hackatn {
     background-color: #5a1226;
@@ -235,11 +236,57 @@ body {
     align-items: center;
 }
 
-.equipo-colaborando {
+/* Reemplazamos .equipo-colaborando por los estilos del Timeline */
+.hackathon-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
     width: 100%;
-    border-radius: 1.5rem;
-    object-fit: cover;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+.timeline-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1.2rem 1.5rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.timeline-step:hover {
+    transform: translateX(6px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.step-number {
+    background-color: #ffffff;
+    color: #5a1226; /* Color tinto corporativo para el número */
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+}
+
+.timeline-step .step-info h4 {
+    margin: 0 0 4px 0;
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-family: inherit;
+}
+
+.timeline-step .step-info p {
+    margin: 0;
+    color: #e2cbd1;
+    font-size: 0.9rem;
+    line-height: 1.4;
 }
 
 .qu-es-un-hackatn .contenido .div {
@@ -337,15 +384,7 @@ body {
     gap: 2rem;
 }
 
-.objetivo {
-    background-color: #faf6f7;
-    padding: 2.5rem;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 250px;
-}
+
 
 .objetivo .div-2 {
     display: flex;
@@ -372,7 +411,7 @@ body {
 }
 
 /* ==========================================
-   PIE DE PÁGINA (FOOTER)
+   FOOTER
    ========================================== */
 .pie-de-pgina {
     background-color: #3b0a18;
@@ -426,4 +465,193 @@ body {
     padding-top: 2rem;
     font-size: 0.85rem;
     color: #d1b5bc;
+}
+
+
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    width: 100%;
+    padding: 4rem 6%; 
+    box-sizing: border-box;
+}
+
+.hero-section .contenido-principal {
+    flex: 1;
+}
+
+.hero-section .code-editor-card {
+    flex: 1;
+    max-width: 520px;
+}
+
+/* RESPONSIVIDAD  */
+@media (max-width: 900px) {
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 5%;
+        text-align: center;
+    }
+}
+
+
+
+.objetivos {
+    padding: 5rem 6%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.encabezado-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.encabezado-2 .resumen {
+    max-width: 350px;
+    margin: 0;
+    color: #665c58;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.objetivo {
+    background-color: #ffffff;
+    border: 1px solid #e5dcd6;
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(90, 24, 39, 0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.card-icon-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #5a1827;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+.objetivo .div-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+
+/* ==========================================
+    HOVERS DE BOTONES Y CARDS 
+   ========================================== */
+
+ 
+.etiqueta-wrapper, .botn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+
+.etiqueta-wrapper:hover {
+    transform: scale(1.05);
+    filter: brightness(1.15); 
+    box-shadow: 0 8px 20px rgba(90, 24, 39, 0.15);
+}
+
+.botn:hover {
+    transform: scale(1.05);
+    filter: brightness(0.95); 
+    box-shadow: 0 8px 20px rgba(90, 24, 39, 0.15);
+}
+
+
+.objetivo:hover {
+   
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(90, 24, 39, 0.2);
+    color: #ffffff;
+}
+
+
+
+
+/* ==========================================
+   FIN  HOVERS DE BOTONES
+   ========================================== */
+
+/* ==========================================
+   ANIMACIONES
+========================================== */
+
+   @keyframes pageEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pgina-datacode {
+    animation: pageEntrance 3.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.timeline-step {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+
+
+@keyframes pulseGlow {
+    0% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scaleX(1.25);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scaleX(1U);
+        opacity: 1;
+    }
+}
+
+.indicador, .indicador-2 {
+    transform-origin: left;
+    animation: pulseGlow 3s infinite ease-in-out;
 }

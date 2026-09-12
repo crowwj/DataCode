@@ -4,9 +4,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="{{ asset('css/home.css') }}">
-        
+        <link rel="stylesheet" href="{{ asset('css/console.css') }}"> 
     </head>
-    <body>
+    <body style="background-color: #faf8f6; background-image: radial-gradient(#d8cbcc 1.5px, transparent 1.5px); background-size: 24px 24px;">
         <div class="pgina-datacode">
             <div class="barra-de-navegacin">
                 <div class="div">
@@ -29,21 +29,31 @@
                 </div>
             </div>
 
-            <!-- Presentacion -->
-            <div class="contenido-principal">
-                <div class="mensaje">
-                    <div class="convocatoria">
-                        <p class="texto">TECNOLOGÍA · CREATIVIDAD · COMUNIDAD</p>
+            <div class="hero-section">
+                <div class="contenido-principal">
+                    <div class="mensaje">
+                        <div class="convocatoria">
+                            <p class="texto">TECNOLOGÍA · CREATIVIDAD · COMUNIDAD</p>
+                        </div>
+                        <div class="t-tulo">Datacode 2.0</div>
+                        <p class="descripci-n">Ideas que se convierten en código. Talento universitario que transforma retos reales en soluciones con impacto.</p>
+                        <div class="acciones">
+                            <div class="etiqueta-wrapper">
+                                <div class="etiqueta-2"> Quiero participar</div>
+                            </div>
+                            <div class="botn">
+                                <div class="etiqueta">Conocer el evento</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="t-tulo">Datacode 2.0</div>
-                    <p class="descripci-n">Ideas que se convierten en código. Talento universitario que transforma retos reales en soluciones con impacto.</p>
-                    <div class="acciones">
-                        <div class="etiqueta-wrapper">
-                            <div class="etiqueta-2"> Quiero participar</div>
-                        </div>
-                        <div class="botn">
-                            <div class="etiqueta">Conocer el evento</div>
-                        </div>
+                </div>
+
+                <div class="code-editor-card">
+                    <div class="editor-topbar">
+                        <span class="file-name" id="file-name">PlayerController.gd</span>
+                        <span class="language-badge" id="lang-badge">Videojuegos</span>
+                    </div>
+                    <div class="editor-body" id="editor-body">      
                     </div>
                 </div>
             </div>
@@ -65,87 +75,95 @@
                     </div>
                 </div>
             </div>
-
-            <!--Descripcion de hackaton -->
             <div class="qu-es-un-hackatn">
-                <img class="equipo-colaborando" src="img/equipo-colaborando.png" />
-                <div class="contenido">
-                    <div class="div">
-                        <div class="indicador-2"></div>
-                        <div class="etiqueta-4">QUÉ ES UN HACKATÓN</div>
-                    </div>
-                    <p class="t-tulo-2">Un reto intenso. Muchas ideas. Un prototipo real.</p>
-                    <p class="descripci-n-2">Es un encuentro colaborativo donde equipos multidisciplinarios diseñan y construyen soluciones en tiempo limitado. No necesitas llegar con todas las respuestas: vienes a encontrarlas junto a otros.</p>
-                    <div class="duracin">
-                        <div class="dato">
-                            <div class="valor">48 h</div>
-                            <div class="etiqueta-5">PARA CREAR</div>
-                        </div>
-                        <div class="arrow-up-right">
-                            <img class="vector" src="img/vector-3.svg" />
-                        </div>
-                    </div>
-                </div>
+    <div class="hackathon-timeline">
+        <div class="timeline-step">
+            <div class="step-number">1</div>
+            <div class="step-info">
+                <h4>Conecta y Forma Equipo</h4>
+                <p>Conoce mentes creativas y arma tu escuadrón multidisciplinario.</p>
             </div>
-
-            <!-- Objetivos de DataCode : hackaton -->
-            <div class="objetivos">
-                <div class="encabezado-2">
-                    <div class="ttulo-de-seccin">
-                        <div class="div">
-                            <div class="indicador"></div>
-                            <div class="etiqueta-3">OBJETIVOS</div>
-                        </div>
-                        <div class="t-tulo-3">Lo que queremos activar.</div>
-                    </div>
-                    <p class="resumen">Tres principios para que cada participante convierta su potencial en impacto.</p>
-                </div>
-                <div class="tarjetas">
-                    <div class="objetivo">
-                        <div class="div-2">
-                            <div class="n-mero">01</div>
-                            <div class="arrow-up-right">
-                                <img class="vector" src="img/vector-2.svg" />
-                            </div>
-                        </div>
-                        <div class="contenido-2">
-                            <div class="nombre">Innovar</div>
-                            <p class="descripci-n-3">Transformar problemas reales en propuestas útiles y originales.</p>
-                        </div>
-                    </div>
-                    <div class="objetivo">
-                        <div class="div-2">
-                            <div class="n-mero">02</div>
-                            <div class="arrow-up-right">
-                                <img class="vector" src="img/vector.svg" />
-                            </div>
-                        </div>
-                        <div class="contenido-2">
-                            <div class="nombre">Colaborar</div>
-                            <p class="descripci-n-3">Conectar talentos diversos para construir mejores soluciones.</p>
-                        </div>
-                    </div>
-                    <div class="objetivo">
-                        <div class="div-2">
-                            <div class="n-mero">03</div>
-                            <div class="arrow-up-right">
-                                <img class="vector" src="img/image.svg" />
-                            </div>
-                        </div>
-                        <div class="contenido-2">
-                            <div class="nombre">Aprender</div>
-                            <p class="descripci-n-3">Desarrollar habilidades técnicas, creativas y humanas.</p>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <div class="timeline-step">
+            <div class="step-number">2</div>
+            <div class="step-info">
+                <h4>Diseña y Prototipa</h4>
+                <p>Transforma una idea en código o diseño funcional bajo presión.</p>
             </div>
+        </div>
+        <div class="timeline-step">
+            <div class="step-number">3</div>
+            <div class="step-info">
+                <h4>Pitch y Gana</h4>
+                <p>Presenta tu solución ante el panel y demuestra el impacto.</p>
+            </div>
+        </div>
+    </div>
+    <div class="contenido">
+        <div class="div">
+            <div class="indicador-2"></div>
+            <div class="etiqueta-4">QUÉ ES UN HACKATÓN</div>
+        </div>
+        <p class="t-tulo-2">Un reto intenso. Muchas ideas. Un prototipo real.</p>
+        <p class="descripci-n-2">Es un encuentro colaborativo donde equipos multidisciplinarios diseñan y construyen soluciones en tiempo limitado. No necesitas llegar con todas las respuestas: vienes a encontrarlas junto a otros.</p>
+        <div class="duracin">
+            <div class="dato">
+            </div>
+        </div>
+    </div>
+</div>
+           
+           <div class="objetivos">
+    <div class="encabezado-2">
+        <div class="ttulo-de-seccin">
+            <div class="div">
+                <div class="indicador"></div>
+                <div class="etiqueta-3">OBJETIVOS</div>
+            </div>
+            <div class="t-tulo-3">Lo que queremos activar.</div>
+        </div>
+        
+    </div>
+    <div class="tarjetas">
+        <div class="objetivo">
+            <div class="div-2">
+                <div class="n-mero">01</div>
+                <div class="card-icon-dot"></div>
+            </div>
+            <div class="contenido-2">
+                <div class="nombre">Innovar</div>
+                <p class="descripci-n-3">Transformar problemas reales en propuestas útiles y originales.</p>
+            </div>
+        </div>
+        <div class="objetivo">
+            <div class="div-2">
+                <div class="n-mero">02</div>
+                <div class="card-icon-dot"></div>
+            </div>
+            <div class="contenido-2">
+                <div class="nombre">Colaborar</div>
+                <p class="descripci-n-3">Conectar talentos diversos para construir mejores soluciones.</p>
+            </div>
+        </div>
+        <div class="objetivo">
+            <div class="div-2">
+                <div class="n-mero">03</div>
+                <div class="card-icon-dot"></div>
+            </div>
+            <div class="contenido-2">
+                <div class="nombre">Aprender</div>
+                <p class="descripci-n-3">Desarrollar habilidades técnicas, creativas y humanas.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
             <!-- Footer  -->
             <div class="pie-de-pgina">
                 <div class="div-2">
                     <div class="identidad">
                         <div class="marca">DataCode 2.0</div>
-                        <p class="universidad">Una iniciativa de la Universidad Autónoma de Occidente · UADEO</p>
+                        <p class="universidad">Una iniciativa de la Universidad Autónoma de Occidente Guamuchil · UADEO</p>
                     </div>
                     <div class="columna">
                         <div class="t-tulo-4">REDES SOCIALES</div>
@@ -172,5 +190,8 @@
             </div>
 
         </div>
+
+
+       <script src="{{ asset('js/console.js') }}"></script> 
     </body>
 </html>
