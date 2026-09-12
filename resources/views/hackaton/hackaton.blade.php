@@ -3,7 +3,7 @@
 </head>
 
 <body>  
-    @include('components.navbar')
+    <x-navbar />
 
    
     <main>
