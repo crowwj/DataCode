@@ -13,7 +13,7 @@
 
 <!-- BOCETO DE LO QUE DEBE IMPRIMIR A LOS TALLERES EXISTENTES, UNA VISTA QUE APARECE SOLO A LOS DOCENTE QUE HACEN LOS TALLERES -->
 
-<!-- 
+
     <main class="main-container">  
         <div class="workshop-card">
             <div class="card-header-info">

@@ -2,23 +2,7 @@
    <link rel="stylesheet" href="{{ asset('css/taller.css') }}">
 </head>
 
-<header>
-        <div class="logo-section">
-            <div class="logo-icon">D</div>
-            <span class="logo-text">Data Code 2.0</span>
-        </div>
-        <nav>
-            <a href="#" class="active">Talleres</a>
-            <a href="#">Comite</a>
-            <a href="#">Hackaton</a>
-            <a href="#">Torneo</a>
-        </nav>
-        <div class="user-section">
-            <a href="#" class="panel-academico">Perfil</a>
-           >
-        </div>
-    </header>
-
+    @include('components.navbar')
   
     <main>
         <div class="form-card">
@@ -96,8 +80,7 @@
                     <button type="button" class="btn btn-cancel">Cancelar</button>
                     <button type="submit" class="btn btn-submit">
                         Crear taller
-                        <!-- Icono pequeño en botón -->
-                        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                       
                     </button>
                 </div>
             </form>

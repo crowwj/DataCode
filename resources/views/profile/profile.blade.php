@@ -3,22 +3,8 @@
      <link rel="stylesheet" href="{{ asset('css/profile.css') }}"> 
 </head>
 <body>
-    <header>
-        <div class="logo-section">
-            <div class="logo-icon">D</div>
-            <span class="logo-text">Data Code 2.0</span>
-        </div>
-        <nav>
-            <a href="#">Talleres</a>
-            <a href="#">Comite</a>
-            <a href="#">Hackaton</a>
-            <a href="#">Torneo</a>
-        </nav>
-        <div class="user-section">
-            <a href="#" class="panel-academico">Perfil</a>
-           
-        </div>
-    </header>
+        @include('components.navbar')
+
 
     <!-- Contenido Principal -->
     <main>

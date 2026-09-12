@@ -14,7 +14,7 @@
 
         <div class="navegacin">
 
-            <a href="{{ route('taller.taller') }}" style="text-decoration: none;">
+            <a href="{{ route('taller.pretaller') }}" style="text-decoration: none;">
                 <div class="text-wrapper">Talleres</div>
             </a>
 

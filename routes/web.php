@@ -16,11 +16,11 @@ Route::get('/taller', function () {
 
 Route::get('/ctaller', function () {
     return view('taller.ctaller');
-});
+})->name('taller.ctaller');   
 
 Route::get('/hackaton', function () {
     return view('hackaton.hackaton');
-})->name('hackaton.hackaton')->middleware('admin');;
+})->name('hackaton.hackaton');
 
 Route::get('/tournament', function () {
     return view('tournament.tournament');
@@ -37,6 +37,11 @@ Route::get('/torneoInfo', function () {
 Route::get('/tallerinfo', function () {
     return view('taller.tallerinfo');
 });
+
+
+Route::get('/pretaller', function () {
+    return view('taller.pretaller');
+})->name('taller.pretaller');
 
 // Autenticación
 

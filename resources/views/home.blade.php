@@ -19,7 +19,7 @@
                         <p class="descripci-n">Ideas que se convierten en código. Talento universitario que transforma retos reales en soluciones con impacto.</p>
                         <div class="acciones">
                             <div class="etiqueta-wrapper">
-                                <div class="etiqueta-2"> Quiero participar</div>
+                                <div class="etiqueta-2">  <a href="{{ route('hackaton.hackaton') }}" style="text-decoration:none;"> Quiero participar </a></div>
                             </div>
                             <div class="botn">
                                 <div class="etiqueta">Conocer el evento</div>
