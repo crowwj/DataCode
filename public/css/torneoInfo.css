@@ -137,13 +137,12 @@ a {
   position: relative;
   width: fit-content;
   margin-top: -1px;
-  font-family: "Manrope-SemiBold", Helvetica;
+  font-family: "Manrope", Helvetica;
   font-weight: 600;
   color: #581c26;
   font-size: 14px;
   letter-spacing: 0;
   line-height: normal;
-  text-decoration: underline;
 }
 
 .detalle-torneo .text-wrapper-3 {
