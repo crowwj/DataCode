@@ -9,27 +9,7 @@
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="nav-left">
-            <div class="logo-box">
-                <span>D</span>
-            </div>
-            <span class="brand-title">Data Code 2.0</span>
-        </div>
-
-        
-        <nav class="nav-links">
-            <a href="#">Talleres</a>
-            <a href="#">Comite</a>
-            <a href="#">Hackaton</a>
-            <a href="#">Torneo</a>
-        </nav>
-
-        <div class="nav-right">
-            <span class="academic-panel-text">Aqui va perfil!! pongalo xd</span>
-            
-        </div>
-    </header>
+    @include('components.navbar')
 
 <!-- BOCETO DE LO QUE DEBE IMPRIMIR A LOS TALLERES EXISTENTES, UNA VISTA QUE APARECE SOLO A LOS DOCENTE QUE HACEN LOS TALLERES -->
 

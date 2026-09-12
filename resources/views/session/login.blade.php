@@ -5,28 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="globals.css" />
   <link rel="stylesheet" href="{{ asset('css/login.css') }}">
-</head>
-<body>
-  <div class="inicio">
-    <!-- Contenedor del header para que cubra ambos lados completos de la pantalla -->
-    <header class="header">
-      <div class="brand">
-        <div class="logo">
-          <div class="text-wrapper">O</div>
-        </div>
-        <div class="div">Data Code 2.0</div>
-      </div>
-      <nav class="navbar">
-        <div class="text-wrapper-2">Talleres</div>
-        <div class="text-wrapper-2">Docentes</div>
-        <div class="text-wrapper-2">Inicio</div>
-        <div class="text-wrapper-2">Soporte</div>
-      </nav>
-      <div class="user-area">
-        <div class="text-wrapper-3">usuario</div>
-        <div class="avatar"></div>
-      </div>
-    </header>
+
+   @include('components.navbar')
 
     <div class="form-section">
       <div class="form-card">

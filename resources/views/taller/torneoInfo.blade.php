@@ -8,24 +8,7 @@
 </head>
 <body>
   <div class="detalle-torneo">
-    <header class="header">
-      <div class="brand">
-        <div class="logo">
-          <div class="text-wrapper">O</div>
-        </div>
-        <div class="div">Data Code 2.0</div>
-      </div>
-      <nav class="navbar">
-        <div class="text-wrapper-2">Talleres</div>
-        <div class="text-wrapper-3">Docentes</div>
-        <div class="text-wrapper-3">Inicio</div>
-        <div class="text-wrapper-3">Soporte</div>
-      </nav>
-      <div class="user-area">
-        <div class="text-wrapper-4">Panel académico</div>
-        <div class="avatar"></div>
-      </div>
-    </header>
+     @include('components.navbar')
 
     <div class="content-container">
       <div class="left-column">

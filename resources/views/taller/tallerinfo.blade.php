@@ -4,23 +4,7 @@
  </head>
 <body>
 
-    <header>
-        <div class="logo-section">
-            <div class="logo-icon">D</div>
-            <span class="logo-text">Data Code 2.0</span>
-        </div>
-        <nav>
-            <a href="#" class="active">Talleres</a>
-            <a href="#">Docentes</a>
-            <a href="#">Inicio</a>
-            <a href="#">Soporte</a>
-        </nav>
-        <div class="user-section">
-            <a href="#" class="panel-academico">Panel académico</a>
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=faces" alt="Avatar del usuario" class="user-avatar">
-        </div>
-    </header>
-
+     @include('components.navbar')
    
     <main>
         <div class="info-card">

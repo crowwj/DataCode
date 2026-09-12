@@ -7,27 +7,7 @@
         <link rel="stylesheet" href="{{ asset('css/console.css') }}"> 
     </head>
     <body style="background-color: #faf8f6; background-image: radial-gradient(#d8cbcc 1.5px, transparent 1.5px); background-size: 24px 24px;">
-        <div class="pgina-datacode">
-            <div class="barra-de-navegacin">
-                <div class="div">
-                    <div class="smbolo">
-                        <div class="monograma">D</div>
-                    </div>
-                    <div class="logotipo">DataCode 2.0</div>
-                </div>
-                <div class="navegacin">
-                   <a href="{{ route('taller.taller') }}" style="text-decoration: none;"><div class="text-wrapper">Talleres</div></a>
-                   <a href="{{ route('comite.comite') }}" style="text-decoration: none;"><div class="text-wrapper">Comité</div></a>
-                   <a href="{{ route('hackaton.hackaton') }}" style="text-decoration: none;"><div class="text-wrapper">Hackatón</div></a>
-                   <a href="{{ route('tournament.tournament') }}" style="text-decoration: none;"><div class="text-wrapper">Torneo</div></a>
-                    <div class="botn">
-                        <div class="etiqueta">Iniciar sesión</div>
-                    </div>
-                    <div class="etiqueta-wrapper">
-                        <div class="etiqueta-2">Registrarse</div>
-                    </div>
-                </div>
-            </div>
+        @include('components.navbar')
 
             <div class="hero-section">
                 <div class="contenido-principal">

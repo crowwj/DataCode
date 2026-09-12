@@ -3,21 +3,7 @@
 </head>
 
 <body>  
-    <header>
-        <div class="logo-section">
-            <div class="logo-icon">D</div>
-            <span class="logo-text">Data Code 2.0</span>
-        </div>
-        <nav>
-            <a href="#">Talleres</a>
-            <a href="#">Docentes</a>
-            <a href="#">Inicio</a>
-            <a href="#">Soporte</a>
-        </nav>
-        <div class="user-section">
-            <a href="#" class="panel-academico">Perfil</a>
-        </div>
-    </header>
+    @include('components.navbar')
 
    
     <main>
