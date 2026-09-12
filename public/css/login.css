@@ -8,72 +8,85 @@
 html,
 body {
   margin: 0px;
-  width: 100%;
   min-height: 100%;
 }
 
-/* Restablecimiento para elementos interactivas */
-button:focus-visible,
-input:focus-visible {
-  outline: 2px solid #581c26 !important;
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
 }
 
 a {
   text-decoration: none;
 }
 
-/* Declaraciones de Fuentes */
+/* @FONTWARNING[{"type": "restricted", "family": "Fraunces-Bold", "weight": "700", "style": "normal", "allowsCrossOrigin": false}] */
 @font-face {
   font-family: "Fraunces-Bold";
   src: local("Fraunces-Bold");
 }
+
+/* @FONTWARNING[{"type": "restricted", "family": "Fraunces-SemiBold", "weight": "600", "style": "normal", "allowsCrossOrigin": false}] */
 @font-face {
   font-family: "Fraunces-SemiBold";
   src: local("Fraunces-SemiBold");
 }
+
+/* @FONTWARNING[{"type": "restricted", "family": "Manrope-Medium", "weight": "500", "style": "normal", "allowsCrossOrigin": false}] */
 @font-face {
   font-family: "Manrope-Medium";
   src: local("Manrope-Medium");
 }
+
+/* @FONTWARNING[{"type": "restricted", "family": "Manrope-SemiBold", "weight": "600", "style": "normal", "allowsCrossOrigin": false}] */
 @font-face {
   font-family: "Manrope-SemiBold";
   src: local("Manrope-SemiBold");
 }
+
+/* @FONTWARNING[{"type": "restricted", "family": "Manrope-Regular", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
 @font-face {
   font-family: "Manrope-Regular";
   src: local("Manrope-Regular");
 }
+
+/* @FONTWARNING[{"type": "restricted", "family": "Fira Sans-Regular", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
 @font-face {
   font-family: "Fira Sans-Regular";
   src: local("Fira Sans-Regular");
 }
+
+/* @FONTWARNING[{"type": "restricted", "family": "Manrope-ExtraBold", "weight": "800", "style": "normal", "allowsCrossOrigin": false}] */
 @font-face {
   font-family: "Manrope-ExtraBold";
   src: local("Manrope-ExtraBold");
-}
+} 
 
-/* Estructura Principal */
 .inicio {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  width: 100%;
+  height: 1120px;
   align-items: center;
   position: relative;
   background-color: #faf6f0;
 }
 
-/* Header adaptado a ancho completo */
 .inicio .header {
   display: flex;
-  width: 100%; /* Permite cubrir ambos lados de la pantalla */
+  width: 1440px;
   height: 80px;
   align-items: center;
   justify-content: space-between;
   padding: 0px 80px;
   position: relative;
   background-color: #faf6f0;
-  border-bottom: 1px solid #dbcfc4;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-left-style: none;
+  border-color: #dbcfc4;
 }
 
 .inicio .brand {
@@ -98,7 +111,7 @@ a {
 .inicio .text-wrapper {
   position: relative;
   width: fit-content;
-  font-family: "Fraunces-Bold", Helvetica, sans-serif;
+  font-family: "Fraunces-Bold", Helvetica;
   font-weight: 700;
   color: #faf6f0;
   font-size: 20px;
@@ -109,7 +122,7 @@ a {
 .inicio .div {
   position: relative;
   width: fit-content;
-  font-family: "Fraunces-SemiBold", Helvetica, sans-serif;
+  font-family: "Fraunces-SemiBold", Helvetica;
   font-weight: 600;
   color: #581c26;
   font-size: 22px;
@@ -119,7 +132,7 @@ a {
 
 .inicio .navbar {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 40px;
   position: relative;
   flex: 0 0 auto;
@@ -128,13 +141,13 @@ a {
 .inicio .text-wrapper-2 {
   position: relative;
   width: fit-content;
-  font-family: "Manrope-Medium", Helvetica, sans-serif;
+  margin-top: -1px;
+  font-family: "Manrope-Medium", Helvetica;
   font-weight: 500;
   color: #7d6b6b;
   font-size: 14px;
   letter-spacing: 0;
   line-height: normal;
-  cursor: pointer;
 }
 
 .inicio .user-area {
@@ -147,7 +160,7 @@ a {
 
 .inicio .text-wrapper-3 {
   width: fit-content;
-  font-family: "Manrope-SemiBold", Helvetica, sans-serif;
+  font-family: "Manrope-SemiBold", Helvetica;
   font-weight: 600;
   color: #2c1f21;
   font-size: 14px;
@@ -161,16 +174,18 @@ a {
   width: 36px;
   height: 36px;
   border-radius: 18px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
 
-/* Sección del Formulario */
 .inicio .form-section {
-  width: 100%;
-  max-width: 1280px;
-  flex: 1;
-  gap: 24px;
-  padding: 60px 20px 100px;
+  width: 1280px;
+  height: 1019px;
+  gap: 15px;
+  padding: 60px 0px 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -178,14 +193,14 @@ a {
 }
 
 .inicio .form-card {
-  width: 100%;
-  max-width: 680px;
-  gap: 20px;
+  width: 680px;
+  gap: 12px;
   padding: 40px;
   flex: 0 0 auto;
   background-color: #ffffff;
   border-radius: 16px;
-  border: 1px solid #dbcfc4;
+  border: 1px solid;
+  border-color: #dbcfc4;
   box-shadow: 0px 4px 24px #2c1f2108;
   display: flex;
   flex-direction: column;
@@ -208,7 +223,7 @@ a {
   position: relative;
   align-self: stretch;
   margin-top: -1px;
-  font-family: "Fraunces-SemiBold", Helvetica, sans-serif;
+  font-family: "Fraunces-SemiBold", Helvetica;
   font-weight: 600;
   color: #581c26;
   font-size: 32px;
@@ -220,7 +235,7 @@ a {
 .inicio .p {
   position: relative;
   align-self: stretch;
-  font-family: "Manrope-Regular", Helvetica, sans-serif;
+  font-family: "Manrope-Regular", Helvetica;
   font-weight: 400;
   color: #7d6b6b;
   font-size: 15px;
@@ -240,78 +255,71 @@ a {
 .inicio .workshop-preview {
   display: flex;
   flex-direction: column;
+  height: 414px;
   align-items: center;
   justify-content: center;
-  gap: 32px;
-  padding: 32px 24px;
+  gap: 47px;
+  padding: 24px;
   position: relative;
   align-self: stretch;
   width: 100%;
   background-color: #faf6f0;
   border-radius: 12px;
-  border: 1px solid #dbcfc4;
+  border: 1px solid;
+  border-color: #dbcfc4;
 }
 
 .inicio .entrada {
   position: relative;
-  width: 100%;
-  max-width: 552px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  width: 552px;
+  height: 104px;
 }
 
 .inicio .preview-header {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 552px;
   align-items: flex-start;
   gap: 6px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .inicio .text-wrapper-5 {
   align-self: stretch;
-  font-family: "Fira Sans-Regular", Helvetica, sans-serif;
+  margin-top: -1px;
+  font-family: "Fira Sans-Regular", Helvetica;
   font-weight: 400;
   color: #581c26;
-  font-size: 20px;
+  font-size: 22px;
   position: relative;
   letter-spacing: 0;
   line-height: normal;
 }
 
 .inicio .img {
-  width: 100%;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 552px;
   height: 1px;
   object-fit: cover;
-  margin: 4px 0;
 }
 
-/* Adaptación para los elementos INPUT */
 .inicio .inputbox {
-  width: 100%;
-  height: 44px;
-  padding: 0 16px;
+  position: absolute;
+  top: 66px;
+  left: 30;
+  width: 552px;
+  height: 38px;
+  padding-left: 10px;
   background-color: #ffffff;
   border-radius: 10px;
-  border: 1px solid #ddcacd;
-  font-family: "Manrope-Regular", Helvetica, sans-serif;
-  font-size: 15px;
-  color: #2c1f21;
-  outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid;
+  border-color: #ddcacd;
 }
 
-.inicio .inputbox:focus {
-  border-color: #581c26;
-  box-shadow: 0 0 0 3px rgba(88, 28, 38, 0.12);
-}
-
-.inicio .inputbox::placeholder {
-  color: #a89898;
-}
-
-/* Adaptación para el BOTÓN Submit */
 .inicio .btn-view-published {
   display: inline-flex;
   align-items: center;
@@ -322,19 +330,13 @@ a {
   flex: 0 0 auto;
   background-color: #581c26;
   border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.inicio .btn-view-published:hover {
-  background-color: #42141c;
 }
 
 .inicio .text-wrapper-6 {
   position: relative;
   width: fit-content;
-  font-family: "Manrope-SemiBold", Helvetica, sans-serif;
+  margin-top: -1px;
+  font-family: "Manrope-SemiBold", Helvetica;
   font-weight: 600;
   color: #faf6f0;
   font-size: 14px;
@@ -356,48 +358,46 @@ a {
   position: relative;
   width: 14px;
   height: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .inicio .vector {
-  width: 12px;
-  height: 12px;
+  position: absolute;
+  width: 86.31%;
+  height: 86.31%;
+  top: 13.69%;
+  left: 13.69%;
 }
 
-/* Sección de Ayuda Inferior */
 .inicio .secondary-info {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   position: relative;
   flex: 0 0 auto;
-  margin-top: 8px;
 }
 
 .inicio .info {
   position: relative;
-  width: 14px;
-  height: 14px;
+  width: 13.67px;
+  height: 13.67px;
   background-image: url(./img/vector.svg);
   background-size: 100% 100%;
 }
 
 .inicio .tienes-dudas-sobre {
   position: relative;
-  max-width: 615px;
-  font-family: "Manrope-Regular", Helvetica, sans-serif;
+  width: 615px;
+  margin-top: -1px;
+  font-family: "Manrope-Regular", Helvetica;
   font-weight: 400;
   color: #7d6b6b;
   font-size: 13px;
   letter-spacing: 0;
   line-height: normal;
-  text-align: center;
 }
 
 .inicio .span {
-  font-family: "Manrope-Regular", Helvetica, sans-serif;
+  font-family: "Manrope-Regular", Helvetica;
   font-weight: 400;
   color: #7d6b6b;
   font-size: 13px;
@@ -405,8 +405,6 @@ a {
 }
 
 .inicio .text-wrapper-7 {
-  font-family: "Manrope-ExtraBold", Helvetica, sans-serif;
+  font-family: "Manrope-ExtraBold", Helvetica;
   font-weight: 800;
-  color: #581c26;
-  cursor: pointer;
 }
