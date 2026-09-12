@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\RegisterController;
 
 
 
@@ -68,6 +68,12 @@ Route::get('/tallerinfo', function () {
 Route::get('/profile', function () {
     return view('profile.profile');
 });
+
+
+
+Route::get('/register', [RegisterController::class, 'create'])->name('register');
+
+Route::post('/register', [RegisterController::class, 'store']);
 
 
 //FIN DE VISTAS PRIVADAS

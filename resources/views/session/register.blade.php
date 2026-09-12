@@ -13,8 +13,8 @@
             <h1>Registro de alumno</h1>
             <div class="divider"></div>
 
-            <form action="#" method="POST">
-                <!-- Nombre -->
+            <form action="/register" method="POST">
+                @csf
                 <div class="form-group full-width" style="margin-bottom: 1.5rem;">
                     <label for="nombre">Nombre(s)</label>
                     <div class="input-wrapper">
