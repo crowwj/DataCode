@@ -1,17 +1,15 @@
-
 <link rel="stylesheet" href="{{ asset('css/home.css') }}">
-
 <div class="pgina-datacode">
     <div class="barra-de-navegacin">
-
         <div class="div">
             <div class="smbolo">
                 <div class="monograma">D</div>
             </div>
+            <div class="logotipo">
+                  <a href="{{ route('home') }}" style="color: #4a1525;, text-decoration:none;">  DataCode 2.0 </a>
 
-            <div class="logotipo">DataCode 2.0</div>
+            </div>
         </div>
-
         <div class="navegacin">
 
             <a href="{{ route('taller.pretaller') }}" style="text-decoration: none;">
@@ -64,4 +62,3 @@
         </div>
     </div>
 </div>
-```

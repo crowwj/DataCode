@@ -1,0 +1,171 @@
+:root {
+    --bg-main: #faf8f6;
+    --card-bg: #ffffff;
+    --text-main: #2c1e22;
+    --text-muted: #7d6b6b;
+    --burgundy: #581c26;
+    --burgundy-hover: #3e1219;
+    --border-color: #e2d8c7;
+    --input-border: #dcd3c4;
+}
+
+.registro-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.encabezado-registro {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.t-tulo-registro {
+    font-family: "Fraunces", serif, Georgia, serif;
+    font-weight: 600;
+    color: var(--burgundy);
+    font-size: 32px;
+    letter-spacing: -0.5px;
+}
+
+.p-registro {
+    color: var(--text-muted);
+    font-size: 15px;
+}
+
+.registro-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 32px;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .registro-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.registro-card {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(44, 31, 33, 0.04);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.section-title {
+    font-family: "Fraunces", serif, Georgia, serif;
+    font-weight: 600;
+    color: var(--burgundy);
+    font-size: 18px;
+}
+
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 600px) {
+    .form-grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.entrada {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.text-wrapper-5 {
+    font-weight: 600;
+    color: var(--text-main);
+    font-size: 14px;
+}
+
+.inputbox {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    background-color: #faf9f6;
+    border-radius: 12px;
+    border: 1px solid var(--input-border);
+    color: var(--text-main);
+    font-size: 15px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.inputbox:focus {
+    background-color: #ffffff;
+    border-color: var(--burgundy);
+    box-shadow: 0 0 0 3px rgba(88, 28, 38, 0.1);
+}
+
+.inputbox[readonly] {
+    background-color: #f0ece1;
+    color: var(--text-muted);
+    cursor: not-allowed;
+}
+
+.reglamento-box {
+    background-color: #faf6f0;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--burgundy);
+    cursor: pointer;
+}
+
+.btn-submit-hackaton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 48px;
+    background-color: var(--burgundy);
+    color: #faf6f0;
+    border-radius: 12px;
+    border: none;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-submit-hackaton:hover {
+    background-color: var(--burgundy-hover);
+}
+
+.btn-submit-hackaton:active {
+    transform: scale(0.98);
+}
+
+.sidebar-objetivos {
+    display: flex;
+    flex-direction: column;
+}

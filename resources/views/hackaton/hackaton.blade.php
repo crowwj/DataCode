@@ -2,19 +2,19 @@
     <link rel="stylesheet" href="{{ asset('css/hackaton.css') }}">
 </head>
 
-<body>  
+<body style="background-color: #faf8f6; background-image: radial-gradient(#d8cbcc 1.5px, transparent 1.5px); background-size: 24px 24px;">  
     <x-navbar />
 
    
     <main>
-        <div class="info-card">
+        <div class="info-card" style="box-shadow: 0 5px 8px rgba(0, 0, 0, 0.09);">
             <h1>Hackatón ISOF</h1>
             <p class="subtitle">Desarrollo intensivo de software, colaboración y resolución de retos tecnológicos en tiempo récord.</p>
             <div class="divider"></div>
 
             <div class="content-stack">
               
-                <div class="info-box">
+                <div class="info-box" style="box-shadow: 0 5px 8px rgba(0, 0, 0, 0.09);">
                     <h2>
                         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
                         ¿Qué es un hackatón?
@@ -23,7 +23,7 @@
                 </div>
 
               
-                <div class="info-box">
+                <div class="info-box" style="box-shadow: 0 5px 8px rgba(0, 0, 0, 0.09);">
                     <h2>
                         <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
                         Reglamentos y normativas
@@ -37,7 +37,7 @@
             
             <div class="form-actions">
                 <a href="#" class="btn btn-outline">Regresar</a>
-                <a href="#" class="btn btn-primary">
+               <a href="{{ route('hackaton.inscripcion') }}" class="btn btn-primary">
                     Inscribirse
                     <svg viewBox="0 0 24 24"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.71 12l-7.86-7.86-1.42 1.42L16.86 11H5v2z"/></svg>
                 </a>

@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Session\LoginController;
 use App\Http\Controllers\Session\RegisterController;
-use Illuminate\Support\Facades\Auth; 
+use Illuminate\Http\Request;
+use App\Http\Controllers\HackatonController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 // Públicas
@@ -38,8 +39,7 @@ Route::get('/torneoInfo', function () {
 
 Route::get('/tallerinfo', function () {
     return view('taller.tallerinfo');
-});
-
+})->name('taller.tallerinfo');
 
 Route::get('/pretaller', function () {
     return view('taller.pretaller');
@@ -52,11 +52,8 @@ Route::get('/login', [LoginController::class, 'create'])
 
 Route::post('/login', [LoginController::class, 'store']);
 
-
 Route::post('/logout', [LoginController::class, 'destroy'])
     ->name('logout');
-
-
 
 Route::get('/register', [RegisterController::class, 'create'])
     ->name('register');
@@ -81,3 +78,18 @@ Route::post('/email/verification-notification', function (Request $request) {
 
     return back()->with('message', 'Se ha enviado un nuevo correo de verificación.');
 })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+
+// Rutas protegidas del Hackatón (Inscripción y Equipos)
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/inscripcion-hackaton', [HackatonController::class, 'create'])->name('hackaton.inscripcion');
+    Route::post('/inscripcion-hackaton', [HackatonController::class, 'store'])->name('hackaton.store');
+    
+    Route::get('/hackaton/equipo', [HackatonController::class, 'teamDashboard'])->name('hackaton.team');
+    Route::post('/hackaton/equipo/crear', [HackatonController::class, 'createTeam'])->name('hackaton.team.create');
+    Route::post('/hackaton/equipo/unirse', [HackatonController::class, 'joinTeam'])->name('hackaton.team.join');
+    Route::delete('/hackaton/equipo/eliminar', [HackatonController::class, 'deleteTeam'])->name('hackaton.team.delete');
+});
+
+
+Route::post('/hackaton/equipo/unirse', [HackatonController::class, 'joinTeam'])->name('hackaton.team.join');

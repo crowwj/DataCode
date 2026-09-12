@@ -2,7 +2,7 @@
     <link rel="stylesheet" href="{{ asset('css/register.css') }}">
 </head>
 
-<body>
+<body style="background-color: #faf8f6; background-image: radial-gradient(#d8cbcc 1.5px, transparent 1.5px); background-size: 24px 24px;">
 
     @include('components.navbar')
 

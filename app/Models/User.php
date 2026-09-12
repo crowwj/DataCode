@@ -15,7 +15,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Notifications\Notifiable;
 
-#[Fillable(['name', 'email', 'password', 'first_last_name', 'second_last_name', 'phone', 'institutional_id', 'role_id', 'municipality_id'])]
+#[Fillable(['name', 'email', 'password', 'first_last_name', 'second_last_name', 'phone', 'institutional_id', 'role_id', 'municipality_id', 'team_id'])]
 #[Hidden(['password', 'remember_token'])]
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -92,6 +92,11 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->belongsToMany(Tournament::class, 'tournament_enrollments')
             ->withPivot(['enrolled_at', 'bracket_position'])
             ->withTimestamps();
+    }
+
+    public function team(): BelongsTo
+    {
+        return $this->belongsTo(Team::class);
     }
 
     public function teams(): BelongsToMany

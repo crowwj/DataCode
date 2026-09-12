@@ -19,7 +19,7 @@
                         <p class="descripci-n">Ideas que se convierten en código. Talento universitario que transforma retos reales en soluciones con impacto.</p>
                         <div class="acciones">
                             <div class="etiqueta-wrapper">
-                                <div class="etiqueta-2">  <a href="{{ route('hackaton.hackaton') }}" style="text-decoration:none;"> Quiero participar </a></div>
+                                <div class="etiqueta-2">  <a href="{{ route('hackaton.hackaton') }}" style="color:white;"> Quiero participar </a></div>
                             </div>
                             <div class="botn">
                                 <div class="etiqueta">Conocer el evento</div>
@@ -158,7 +158,7 @@
                     </div>
                     <div class="columna">
                         <div class="t-tulo-4">INFORMACIÓN</div>
-                        <div class="enlace">Talleres</div>
+                        <div class="enlace">  <a href="{{ route('taller.tallerinfo') }}" style="color: white; text-decoration:none;">  Talleres </a> </div>
                         <div class="enlace">Comité</div>
                         <div class="enlace">Hackatón</div>
                     </div>

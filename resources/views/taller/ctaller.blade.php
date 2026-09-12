@@ -4,8 +4,8 @@
 
     @include('components.navbar')
   
-    <main>
-        <div class="form-card">
+    <main style="background-color: #faf8f6; background-image: radial-gradient(#d8cbcc 1.5px, transparent 1.5px); background-size: 24px 24px;">
+        <div class="form-card" style="box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
             <h1>Crear taller universitario</h1>
             <div class="divider"></div>
 

@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="{{ asset('css/pretaller.css') }}">
 </head>
 @include('components.navbar')
-<main>
+<main style="background-color: #faf8f6; background-image: radial-gradient(#d8cbcc 1.5px, transparent 1.5px); background-size: 24px 24px;">
         <div class="card-container">
             
             <!-- Opción 1: Unirse a Taller -->

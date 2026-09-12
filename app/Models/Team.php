@@ -1,33 +1,29 @@
 <?php
-
 namespace App\Models;
 
-use Database\Factories\TeamFactory;
-use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\HasOne;
 
-#[Fillable(['name', 'code', 'hackathon_id'])]
 class Team extends Model
 {
-    /** @use HasFactory<TeamFactory> */
     use HasFactory;
 
-    public function hackathon(): BelongsTo
+    protected $fillable = [
+    'name',
+    'code',
+    'hackathon_id',
+    'user_id',
+];
+
+    // Relación con el usuario creador
+    public function owner()
     {
-        return $this->belongsTo(Hackathon::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
 
-    public function members(): BelongsToMany
+    // Relación con los miembros del equipo
+    public function members()
     {
-        return $this->belongsToMany(User::class);
-    }
-
-    public function project(): HasOne
-    {
-        return $this->hasOne(Project::class);
+        return $this->hasMany(User::class, 'team_id');
     }
 }

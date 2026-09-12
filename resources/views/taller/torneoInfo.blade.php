@@ -3,10 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="globals.css" />
   <link rel="stylesheet" href="{{ asset('css/torneoInfo.css') }}">
 </head>
-<body>
+<body style="background-color: #faf8f6; background-image: radial-gradient(#d8cbcc 1.5px, transparent 1.5px); background-size: 24px 24px;">
   <div class="detalle-torneo">
     <x-navbar>
 
@@ -17,10 +16,7 @@
             <div class="status-badge">
               <div class="text-wrapper-5">INSCRIPCIONES ABIERTAS</div>
             </div>
-            <p class="p">
-              <span class="span">ID del Taller: </span>
-              <span class="text-wrapper-6">#PY-2026</span>
-            </p>
+          
           </div>
 
           <div class="div-3">
