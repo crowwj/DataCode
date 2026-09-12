@@ -9,11 +9,9 @@
   </head>
   <body>
     <div class="inicio">
-      
-
       <div class="form-section">
-        <!-- Reemplazado por una etiqueta <form> para manejo correcto del envío -->
-        <form class="form-card" action="#" method="POST">
+        <form class="form-card" action="{{ route('login') }}" method="POST">
+          @csrf
           <div class="title-group">
             <div class="text-wrapper-4">Iniciar sesion</div>
             <p class="p">
