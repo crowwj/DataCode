@@ -43,6 +43,10 @@ Route::get('/login', function () {
     return view('session.login');
 })->name('session.login');
 
+Route::get('/torneoInfo', function () {
+    return view('taller.torneoInfo');
+})->name('taller.torneoInfo');
+
 //VISTAS PUBLICAS INFORMATICAS
 
 Route::get('/tallerinfo', function () {

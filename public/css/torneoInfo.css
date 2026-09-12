@@ -1,0 +1,983 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0px;
+  min-height: 100%;
+}
+
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* @FONTWARNING[{"type": "restricted", "family": "Fraunces-Bold", "weight": "700", "style": "normal", "allowsCrossOrigin": false}] */
+@font-face {
+  font-family: "Fraunces-Bold";
+  src: local("Fraunces-Bold");
+}
+
+/* @FONTWARNING[{"type": "restricted", "family": "Fraunces-SemiBold", "weight": "600", "style": "normal", "allowsCrossOrigin": false}] */
+@font-face {
+  font-family: "Fraunces-SemiBold";
+  src: local("Fraunces-SemiBold");
+}
+
+/* @FONTWARNING[{"type": "restricted", "family": "Manrope-SemiBold", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
+@font-face {
+  font-family: "Manrope-SemiBold";
+  src: local("Manrope-SemiBold");
+}
+
+/* @FONTWARNING[{"type": "restricted", "family": "Manrope-Medium", "weight": "500", "style": "normal", "allowsCrossOrigin": false}] */
+@font-face {
+  font-family: "Manrope-Medium";
+  src: local("Manrope-Medium");
+}
+
+/* @FONTWARNING[{"type": "restricted", "family": "Manrope-Bold", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
+@font-face {
+  font-family: "Manrope-Bold";
+  src: local("Manrope-Bold");
+}
+
+/* @FONTWARNING[{"type": "restricted", "family": "Manrope-Regular", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
+@font-face {
+  font-family: "Manrope-Regular";
+  src: local("Manrope-Regular");
+}
+
+.detalle-torneo {
+  display: flex;
+  flex-direction: column;
+  min-height: 1120px;
+  align-items: center;
+  position: relative;
+  background-color: #faf6f0;
+}
+
+.detalle-torneo .header {
+  display: flex;
+  width: 100%; /* Cambiado de 1440px a 100% para cubrir toda la pantalla */
+  max-width: 100%; 
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 80px; /* Ajusta los márgenes laterales según tu diseño */
+  position: relative;
+  background-color: #faf6f0;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-left-style: none;
+  border-color: #dbcfc4;
+}
+
+.detalle-torneo .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.detalle-torneo .logo {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #581c26;
+  border-radius: 6px;
+}
+
+.detalle-torneo .text-wrapper {
+  position: relative;
+  width: fit-content;
+  font-family: "Fraunces-Bold", Helvetica;
+  font-weight: 700;
+  color: #faf6f0;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .div {
+  position: relative;
+  width: fit-content;
+  font-family: "Fraunces-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #581c26;
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .navbar {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 40px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.detalle-torneo .text-wrapper-2 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Manrope-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #581c26;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  text-decoration: underline;
+}
+
+.detalle-torneo .text-wrapper-3 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Manrope-Medium", Helvetica;
+  font-weight: 500;
+  color: #7d6b6b;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .user-area {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.detalle-torneo .text-wrapper-4 {
+  position: relative;
+  width: fit-content;
+  font-family: "Manrope-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #2c1f21;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .avatar {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  background-image: url(./img/avatar-3.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.detalle-torneo .content-container {
+  display: flex;
+  width: 1440px;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 40px 80px 100px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.detalle-torneo .left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.detalle-torneo .main-info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 40px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid;
+  border-color: #dbcfc4;
+  box-shadow: 0px 4px 24px #2c1f2108;
+}
+
+.detalle-torneo .div-2 {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.detalle-torneo .status-badge {
+  display: inline-flex;
+  align-items: flex-start;
+  padding: 6px 12px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: #eaf6ef;
+  border-radius: 999px;
+}
+
+.detalle-torneo .text-wrapper-5 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #1f7a42;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .p {
+  position: relative;
+  width: fit-content;
+  font-family: "Manrope-Regular", Helvetica;
+  font-weight: 400;
+  color: #7d6b6b;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .span {
+  font-family: "Manrope-Regular", Helvetica;
+  font-weight: 400;
+  color: #7d6b6b;
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+.detalle-torneo .text-wrapper-6 {
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+}
+
+.detalle-torneo .div-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.detalle-torneo .text-wrapper-7 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  font-family: "Fraunces-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #581c26;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .text-wrapper-8 {
+  position: relative;
+  align-self: stretch;
+  font-family: "Manrope-Regular", Helvetica;
+  font-weight: 400;
+  color: #7d6b6b;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .line {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 1px;
+  object-fit: cover;
+}
+
+.detalle-torneo .meta-grid {
+  flex-direction: column;
+  gap: 16px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.detalle-torneo .meta-row {
+  gap: 24px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.detalle-torneo .detail-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.detalle-torneo .icon-frame-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 18px;
+  height: 18px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.detalle-torneo .icon-frame {
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.detalle-torneo .vector {
+  position: absolute;
+  width: 97.22%;
+  height: 97.22%;
+  top: 2.78%;
+  left: 2.78%;
+}
+
+.detalle-torneo .div-4 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Manrope-SemiBold", Helvetica;
+  font-weight: 400;
+  color: #2c1f21;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .text-wrapper-9 {
+  font-weight: 600;
+}
+
+.detalle-torneo .text-wrapper-10 {
+  font-family: "Manrope-Regular", Helvetica;
+}
+
+.detalle-torneo .div-5 {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid;
+  border-color: #dbcfc4;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.detalle-torneo .text-wrapper-11 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Fraunces-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #581c26;
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .text-wrapper-12 {
+  position: relative;
+  align-self: stretch;
+  font-family: "Manrope-Regular", Helvetica;
+  font-weight: 400;
+  color: #7d6b6b;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 21px;
+}
+
+.detalle-torneo .div-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.detalle-torneo .text-wrapper-13 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #2c1f21;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .title-group {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.detalle-torneo .action {
+  display: inline-flex;
+  align-items: flex-start;
+  padding: 10px 16px;
+  position: relative;
+  flex: 0 0 auto;
+  border-radius: 8px;
+  border: 1px solid;
+  border-color: #581c26;
+}
+
+.detalle-torneo .text-wrapper-14 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Manrope-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #581c26;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .table-header {
+  display: flex;
+  align-items: flex-start;
+  padding: 0px 0px 12px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: #dbcfc4;
+}
+
+.detalle-torneo .text-wrapper-15 {
+  position: relative;
+  flex: 1;
+  margin-top: -1px;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #7d6b6b;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .text-wrapper-16 {
+  position: relative;
+  width: 220px;
+  margin-top: -1px;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #7d6b6b;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .text-wrapper-17 {
+  position: relative;
+  width: 150px;
+  margin-top: -1px;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #7d6b6b;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .text-wrapper-18 {
+  position: relative;
+  width: 120px;
+  margin-top: -1px;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #7d6b6b;
+  font-size: 12px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .participant-row {
+  display: flex;
+  align-items: center;
+  padding: 12px 0px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: #dbcfc4;
+}
+
+.detalle-torneo .student-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.detalle-torneo .avatar-2 {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background-image: url(./img/avatar-4.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.detalle-torneo .text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.detalle-torneo .text-wrapper-19 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Manrope-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #2c1f21;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.detalle-torneo .text-wrapper-20 {
+  position: relative;
+  width: fit-content;
+  font-family: "Manrope-Regular", Helvetica;
+  font-weight: 400;
+  color: #7d6b6b;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.detalle-torneo .text-wrapper-21 {
+  position: relative;
+  width: 220px;
+  font-family: "Manrope-Regular", Helvetica;
+  font-weight: 400;
+  color: #2c1f21;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.detalle-torneo .text-wrapper-22 {
+  position: relative;
+  width: 150px;
+  font-family: "Manrope-Regular", Helvetica;
+  font-weight: 400;
+  color: #7d6b6b;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .actions {
+  display: flex;
+  width: 120px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 12px;
+  position: relative;
+}
+
+.detalle-torneo .avatar-3 {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background-image: url(./img/avatar-5.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.detalle-torneo .avatar-4 {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background-image: url(./img/avatar-2.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.detalle-torneo .avatar-5 {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background-image: url(./img/avatar.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.detalle-torneo .avatar-6 {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background-image: url(./img/image.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.detalle-torneo .right-column {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  align-items: flex-start;
+  gap: 32px;
+  position: relative;
+}
+
+.detalle-torneo .enrollment-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 32px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid;
+  border-color: #dbcfc4;
+  box-shadow: 0px 4px 24px #2c1f2108;
+}
+
+.detalle-torneo .text-wrapper-23 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Fraunces-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #581c26;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .frame {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.detalle-torneo .element-cupos {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 400;
+  color: transparent;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .text-wrapper-24 {
+  font-weight: 700;
+  color: #2c1f21;
+}
+
+.detalle-torneo .text-wrapper-25 {
+  font-family: "Manrope-Medium", Helvetica;
+  font-weight: 500;
+  color: #7d6b6b;
+  font-size: 16px;
+}
+
+.detalle-torneo .text-wrapper-26 {
+  position: relative;
+  width: fit-content;
+  font-family: "Manrope-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #1f7a42;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .progress-bar-track {
+  display: flex;
+  height: 10px;
+  align-items: flex-start;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  background-color: #faf6f0;
+  border-radius: 99px;
+}
+
+.detalle-torneo .progress-fill {
+  width: 242px;
+  background-color: #581c26;
+  border-radius: 99px;
+  position: relative;
+  align-self: stretch;
+}
+
+.detalle-torneo .frame-2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.detalle-torneo .text-wrapper-27 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Manrope-Regular", Helvetica;
+  font-weight: 400;
+  color: #7d6b6b;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .text-wrapper-28 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #2c1f21;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .div-7 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 32px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid;
+  border-color: #dbcfc4;
+}
+
+.detalle-torneo .btn-edit {
+  border: 1px solid;
+  border-color: #581c26;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 0px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  border-radius: 8px;
+}
+
+.detalle-torneo .caption-edit {
+  display: flex;
+  flex-direction: column;
+  width: 16px;
+  height: 16px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.detalle-torneo .vector-wrapper {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.detalle-torneo .img {
+  position: absolute;
+  width: 97.92%;
+  height: 97.92%;
+  top: 2.08%;
+  left: 2.08%;
+}
+
+.detalle-torneo .text-wrapper-29 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Manrope-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #581c26;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .btn-close {
+  background-color: #581c26;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 0px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  border-radius: 8px;
+}
+
+.detalle-torneo .text-wrapper-30 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Manrope-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #faf6f0;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .btn-cancel {
+  border: 1px solid;
+  border-color: #ba1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 0px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  border-radius: 8px;
+}
+
+.detalle-torneo .text-wrapper-31 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Manrope-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ba1a1a;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .text-wrapper-32 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Fraunces-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #581c26;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.detalle-torneo .personajes-base {
+  position: relative;
+  align-self: stretch;
+  font-family: "Manrope-Regular", Helvetica;
+  font-weight: 400;
+  color: #7d6b6b;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: 18.2px;
+}
