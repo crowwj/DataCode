@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Session\LoginController;
 use App\Http\Controllers\Session\RegisterController;
+use Illuminate\Support\Facades\Auth; 
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 // Públicas
 
@@ -49,7 +51,7 @@ Route::post('/login', [LoginController::class, 'store']);
 Route::post('/logout', [LoginController::class, 'destroy'])
     ->name('logout');
 
-    
+
 
 Route::get('/register', [RegisterController::class, 'create'])
     ->name('register');
@@ -60,4 +62,17 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/profile', function () {
     return view('profile.profile');
-})->name('profile');
+})->middleware(['auth', 'verified'])->name('profile');
+
+Route::get('/email/verify', function () { return view('auth.verify-email'); })->middleware('auth')->name('verification.notice');
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    $request->fulfill();
+
+    return redirect()->route('home');
+})->middleware(['auth', 'signed'])->name('verification.verify');
+
+Route::post('/email/verification-notification', function (Request $request) {
+    $request->user()->sendEmailVerificationNotification();
+
+    return back()->with('message', 'Se ha enviado un nuevo correo de verificación.');
+})->middleware(['auth', 'throttle:6,1'])->name('verification.send');
