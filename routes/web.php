@@ -11,9 +11,11 @@ Route::get('/', function () {
     return view('home');
 });
 
+
 Route::get('/taller', function () {
     return view('taller.taller');
-});
+})->name('taller.taller');
+
 
 Route::get('/ctaller', function () {
     return view('taller.ctaller');
@@ -21,21 +23,25 @@ Route::get('/ctaller', function () {
 
 Route::get('/register', function () {
     return view('session.register');
-});
+})->name('session.register');
 
 
 Route::get('/hackaton', function () {
     return view('hackaton.hackaton');
-});
+})->name('hackaton.hackaton');
+
+Route::get('/tournament', function () {
+    return view('tournament.tournament');
+})->name('tournament.tournament');
 
 
 Route::get('/committee', function () {
     return view('committee.committee');
-});
+})->name('comite.comite');
 
 Route::get('/login', function () {
     return view('session.login');
-});
+})->name('session.login');
 
 //VISTAS PUBLICAS INFORMATICAS
 

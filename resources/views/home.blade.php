@@ -16,10 +16,10 @@
                     <div class="logotipo">DataCode 2.0</div>
                 </div>
                 <div class="navegacin">
-                    <div class="text-wrapper">Talleres</div>
-                    <div class="text-wrapper">Comité</div>
-                    <div class="text-wrapper">Hackatón</div>
-                    <div class="text-wrapper">Torneo</div>
+                   <a href="{{ route('taller.taller') }}" style="text-decoration: none;"><div class="text-wrapper">Talleres</div></a>
+                   <a href="{{ route('comite.comite') }}" style="text-decoration: none;"><div class="text-wrapper">Comité</div></a>
+                   <a href="{{ route('hackaton.hackaton') }}" style="text-decoration: none;"><div class="text-wrapper">Hackatón</div></a>
+                   <a href="{{ route('tournament.tournament') }}" style="text-decoration: none;"><div class="text-wrapper">Torneo</div></a>
                     <div class="botn">
                         <div class="etiqueta">Iniciar sesión</div>
                     </div>
