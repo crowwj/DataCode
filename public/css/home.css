@@ -1,0 +1,429 @@
+/* ==========================================
+   RESET & VARIABLES
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.5;
+}
+
+.pgina-datacode {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================
+   BARRA DE NAVEGACIÓN
+   ========================================== */
+.barra-de-navegacin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.barra-de-navegacin .div {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.smbolo {
+    background-color: #5a1226;
+    color: #ffffff;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.logotipo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.navegacin {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navegacin .text-wrapper {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #333333;
+    cursor: pointer;
+}
+
+.navegacin .botn {
+    background-color: transparent;
+    border: 1px solid #5a1226;
+    padding: 0.5rem 1.25rem;
+    border-radius: 99px;
+    cursor: pointer;
+}
+
+.navegacin .botn .etiqueta {
+    color: #5a1226;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.navegacin .etiqueta-wrapper {
+    background-color: #5a1226;
+    padding: 0.5rem 1.25rem;
+    border-radius: 99px;
+    cursor: pointer;
+}
+
+.navegacin .etiqueta-2 {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   CONTENIDO PRINCIPAL (HERO)
+   ========================================== */
+.contenido-principal {
+    padding: 5rem 5% 4rem 5%;
+    max-width: 800px;
+}
+
+.mensaje .convocatoria {
+    display: inline-block;
+    background-color: #f7ecef;
+    padding: 0.35rem 0.75rem;
+    border-radius: 99px;
+    margin-bottom: 1.5rem;
+}
+
+.mensaje .convocatoria .texto {
+    color: #5a1226;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.mensaje .t-tulo {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #5a1226;
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+}
+
+.mensaje .descripci-n {
+    font-size: 1.1rem;
+    color: #555555;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.mensaje .acciones {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.mensaje .acciones .etiqueta-wrapper {
+    background-color: #5a1226;
+    padding: 0.75rem 1.5rem;
+    border-radius: 99px;
+    cursor: pointer;
+}
+
+.mensaje .acciones .etiqueta-2 {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.mensaje .acciones .botn {
+    border: 1px solid #5a1226;
+    padding: 0.75rem 1.5rem;
+    border-radius: 99px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.mensaje .acciones .botn .etiqueta {
+    color: #5a1226;
+    font-weight: 600;
+}
+
+/* ==========================================
+   QUIÉNES SOMOS
+   ========================================== */
+.quines-somos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 5rem 5%;
+    align-items: center;
+}
+
+.quines-somos .encabezado .div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.indicador {
+    width: 24px;
+    height: 2px;
+    background-color: #5a1226;
+}
+
+.etiqueta-3 {
+    color: #5a1226;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.quines-somos .encabezado .p {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+.historia .introducci-n {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #5a1226;
+    margin-bottom: 1.5rem;
+}
+
+.historia .detalle {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.historia .detalle .texto-2 {
+    color: #666666;
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   QUÉ ES UN HACKATÓN (SECCIÓN OSCURA)
+   ========================================== */
+.qu-es-un-hackatn {
+    background-color: #5a1226;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 6rem 5%;
+    align-items: center;
+}
+
+.equipo-colaborando {
+    width: 100%;
+    border-radius: 1.5rem;
+    object-fit: cover;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.qu-es-un-hackatn .contenido .div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.indicador-2 {
+    width: 24px;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+.etiqueta-4 {
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.t-tulo-2 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+}
+
+.descripci-n-2 {
+    color: #e2cbd1;
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.duracin {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1.5rem;
+}
+
+.dato .valor {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.etiqueta-5 {
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    color: #e2cbd1;
+}
+
+.arrow-up-right {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================================
+   OBJETIVOS
+   ========================================== */
+.objetivos {
+    padding: 6rem 5%;
+    background-color: #ffffff;
+}
+
+.encabezado-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3.5rem;
+}
+
+.t-tulo-3 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-top: 0.5rem;
+}
+
+.resumen {
+    color: #666666;
+    max-width: 350px;
+    font-size: 0.95rem;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.objetivo {
+    background-color: #faf6f7;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+}
+
+.objetivo .div-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.n-mero {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #5a1226;
+}
+
+.objetivo .nombre {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.descripci-n-3 {
+    color: #666666;
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   PIE DE PÁGINA (FOOTER)
+   ========================================== */
+.pie-de-pgina {
+    background-color: #3b0a18;
+    color: #ffffff;
+    padding: 4rem 5% 2rem 5%;
+}
+
+.pie-de-pgina .div-2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.identidad .marca {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.universidad {
+    color: #d1b5bc;
+    font-size: 0.85rem;
+    max-width: 300px;
+}
+
+.columna {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.t-tulo-4 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #d1b5bc;
+    margin-bottom: 0.5rem;
+}
+
+.enlace {
+    color: #ffffff;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.cierre {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    font-size: 0.85rem;
+    color: #d1b5bc;
+}

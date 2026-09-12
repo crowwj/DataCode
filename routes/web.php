@@ -2,11 +2,26 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+
+
+// VISTAS PUBLICAS 
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/taller', function () {
+    return view('taller.taller');
 });
 
 
-Route::get('/hello', function () {
-    return 'Hello World';
+
+
+
+//FIN DE VISTAS PUBLICAS
+
+
+Route::get('/ctaller', function () {
+    return view('taller.ctaller');
 });
