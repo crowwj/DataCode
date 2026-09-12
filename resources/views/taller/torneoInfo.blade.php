@@ -16,7 +16,7 @@
         <div class="div">Data Code 2.0</div>
       </div>
       <nav class="navbar">
-        <div class="text-wrapper-2">Talleres</div>
+        <div class="text-wrapper-3">Talleres</div>
         <div class="text-wrapper-3">Docentes</div>
         <div class="text-wrapper-3">Inicio</div>
         <div class="text-wrapper-3">Soporte</div>
