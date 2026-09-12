@@ -8,8 +8,6 @@
     </head>
     <body>
         <div class="pgina-datacode">
-            
-            <!--Navbar -->
             <div class="barra-de-navegacin">
                 <div class="div">
                     <div class="smbolo">
@@ -157,8 +155,8 @@
                     </div>
                     <div class="columna">
                         <div class="t-tulo-4">CONTÁCTANOS</div>
-                        <div class="enlace">datacode@uadeo.mx</div>
-                        <div class="enlace">+52 667 000 2020</div>
+                        <div class="enlace">@correo</div>
+                        <div class="enlace">@numero</div>
                     </div>
                     <div class="columna">
                         <div class="t-tulo-4">INFORMACIÓN</div>

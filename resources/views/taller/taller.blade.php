@@ -17,6 +17,7 @@
             <span class="brand-title">Data Code 2.0</span>
         </div>
 
+        
         <nav class="nav-links">
             <a href="#">Talleres</a>
             <a href="#">Comite</a>
