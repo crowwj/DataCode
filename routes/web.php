@@ -28,7 +28,7 @@ Route::get('/register', function () {
 
 Route::get('/hackaton', function () {
     return view('hackaton.hackaton');
-})->name('hackaton.hackaton');
+})->name('hackaton.hackaton')->middleware('admin');;
 
 Route::get('/tournament', function () {
     return view('tournament.tournament');
